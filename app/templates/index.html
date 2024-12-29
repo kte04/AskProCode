@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+title
+{% endblock %}
+
+{% block content %}
+<h1>this is index.html content</h1>
+{% if posts %}
+<h1>Posts:</h1>
+{% for post in posts %}
+  <h2>{{ post }}</h2>
+{% endfor %}
+{% else %}
+<h2>No posts Found</h2>
+{% endif %}
+
+{% endblock %}
