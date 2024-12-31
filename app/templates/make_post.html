@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+write post
+{% endblock %}
+
+{% block content %}
+<h1>this is make_post.html content</h1>
+
+<form action="/post", method="post">
+  {{ form.hidden_tag() }}
+  {{ form.title(placeholder="Title") }}
+  {{ form.content(placeholder="Write here:") }}
+  {{ form.submit() }}
+</form>
+
+{% endblock %}
