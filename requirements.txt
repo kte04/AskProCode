@@ -3,3 +3,5 @@ flask_sqlalchemy
 flask_wtf
 wtforms
 werkzeug
+email_validator
+flask_login

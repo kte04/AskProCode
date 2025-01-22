@@ -1,5 +1,11 @@
 <nav>
   <div><a href="/">Home</a></div>
   <div><a href="/create_post">Post</a></div>
-  <div><a href="/">xdd</a></div>
+  <div><a href="/about">About Us</a></div>
+  <div><a href="/register">Register</a></div>
+  {% if current_user.is_authenticated %}
+    <div><a href="/profile">Profile</a></div>
+  {% else %}
+    <div><a href="/login">Login</a></div>
+  {% endif %}
 </nav>

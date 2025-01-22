@@ -1,23 +1,48 @@
 {% extends "base.html" %}
 
 {% block title %}
-title
+Welcome to AskProCode
 {% endblock %}
 
 {% block content %}
-<h1>this is index.html content</h1>
-{% if posts %}
-  <h1>Posts:</h1>
-  {% for post in posts %}
-    <h2>{{ post.title }}</h2>
-    <h3>user_id = {{ post.user_id }}</h3>
-    <h3>post_id = {{ post.id }}</h3>
-    <p>{{ post.content }}</p>
-    <a href="/delete_post_{{ post.id }}">Delete</a>
-    <hr>
-  {% endfor %}
-{% else %}
-<h2>No posts Found</h2>
-{% endif %}
+<div class="container text-center mt-5">
+    <h1 class="display-4">Welcome to AskProCode</h1>
+    <p class="lead">A platform for programmers to ask questions, share answers, and collaborate.</p>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ask Questions</h5>
+                    <p class="card-text">Post your programming-related questions and get answers from the community.</p>
+                    <a href="/create_post" class="btn btn-primary">Create Post</a>
+                </div>
+            </div>
+        </div>
 
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Browse Posts</h5>
+                    <p class="card-text">Explore posts by other users, get insights, and contribute your knowledge.</p>
+                    <a href="/feed" class="btn btn-primary">View Posts</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Join Us</h5>
+                    <p class="card-text">Sign up to ask questions, answer posts, and connect with the community.</p>
+                    <a href="/register" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4">
+
+    <p>Already a member? <a href="/login">Login</a></p>
+</div>
 {% endblock %}
