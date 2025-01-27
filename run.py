@@ -4,7 +4,7 @@ from app.routes import *  # * includes my_app too
 
 
 def main():
-    my_app.run(debug=True, port=8080)
+    my_app.run()
 
 
 if __name__ == "__main__":
