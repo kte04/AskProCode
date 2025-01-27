@@ -1,0 +1,109 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Navbar styles */
+nav {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav div {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffc107;
+}
+
+/* Header styles */
+h1, h2, h3 {
+    text-align: center;
+    margin-top: 20px;
+    color: #343a40;
+}
+
+/* Post styles */
+h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #495057;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Flash message styles */
+.alert {
+    max-width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Buttons and links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Page container */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+ 
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}

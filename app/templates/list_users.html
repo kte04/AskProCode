@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+title
+{% endblock %}
+
+{% block content %}
+<h1>this is list_users.html content</h1>
+{% if users %}
+  <h1>Users:</h1>
+  {% for user in users %}
+    <h2>{{ user.username }}</h2>
+    <h3>user_id = {{ user.id }}</h3>
+    <h3>email = {{ user.email }}</h3>
+    <h3>role = {{ user.role }}</h3>
+    <a href="/delete_user_{{ user.id }}">Delete</a>
+    <hr>
+  {% endfor %}
+{% else %}
+<h2>No Users Found</h2>
+{% endif %}
+
+{% endblock %}

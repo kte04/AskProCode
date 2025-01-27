@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+Feed
+{% endblock %}
+
+{% block content %}
+<h1>this is feed.html content</h1>
+
+
+
+{% if posts %}
+  <h1>Posts:</h1>
+  {% for post in posts %}
+
+<div class="card mb-4">
+  <div class="card-header">
+    <h5 class="mb-0">
+      <a href="/profile/{{ post.user_id }}" class="text-decoration-none text-primary">
+        {{ post.author.username }}
+      </a>
+    </h5>
+    <small class="text-muted">Posted on {{ post.timestamp.strftime('%b %d, %Y at %H:%M') }}</small>
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">{{ post.title }}</h3>
+    <p class="card-text">{{ post.content }}</p>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <a href="/post/{{ post.id }}" class="btn btn-primary btn-sm">View Post</a>
+    <button class="btn btn-secondary btn-sm">Comment</button>
+  </div>
+</div>
+
+
+    <a href="/delete_post_{{ post.id }}">Delete</a>
+    <hr>
+  {% endfor %}
+{% else %}
+<h2>No posts Found</h2>
+{% endif %}
+
+
+{% endblock %}

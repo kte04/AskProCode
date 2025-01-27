@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+About Us
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="display-4 text-center">About This Project</h1>
+    <p class="lead text-center">This project is designed to provide a platform for programmers to ask questions, share knowledge, and interact with each other. It aims to foster collaboration and learning in the coding community.</p>
+
+    <h2 class="mt-4">Features:</h2>
+    <ul class="list-group">
+        <li class="list-group-item">User registration and authentication</li>
+        <li class="list-group-item">Create, edit, and delete posts</li>
+        <li class="list-group-item">Commenting on posts</li>
+        <li class="list-group-item">User roles (admin and user)</li>
+        <li class="list-group-item">Tagging posts for better categorization</li>
+    </ul>
+
+    <h2 class="mt-4">Technologies Used:</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Flask</li>
+        <li class="list-group-item">SQLAlchemy</li>
+        <li class="list-group-item">Bootstrap</li>
+        <li class="list-group-item">Flask-WTF (for forms)</li>
+        <li class="list-group-item">Flask-Login (for authentication)</li>
+        <li class="list-group-item">HTML/CSS</li>
+    </ul>
+
+    <h2 class="mt-4">About Me</h2>
+    <p><strong>Name:</strong> Nikoloz Kuprashvili</p>
+    <p><strong>Email:</strong> nikoloz.kuprashvilite04@geolab.edu.ge</p>
+
+    <h2 class="mt-4">Contact Information</h2>
+    <p>If you'd like to get in touch with me, please visit:</p>
+    <a href="/contact" class="btn btn-primary mx-4">Contact Page</a>
+</div>
+{% endblock %}
